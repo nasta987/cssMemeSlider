@@ -1,0 +1,288 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Start*/
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.container-slider {
+  position: relative;
+  flex-direction: column-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh; 
+  background-color: rgb(165, 200, 200);
+  font-size: 19px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* Стиль для слайдов */
+.img-mem {
+  display: none; /* По умолчанию скрыты все слайды */
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.img-mem img {
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+  box-shadow: 1px -2px 36px rgba(0, 0, 0, 0.92);
+}
+.text-mem {
+  padding-top: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  padding-left: 7%;
+}
+
+/* Стиль для радио-кнопок */
+
+.radio-slide, label {
+  position: absolute;
+  bottom: 10px; /* Располагаем радио-кнопки под слайдерами */
+}
+/* Расположение радио-кнопок */
+#contactChoice1 {
+  left: 66%; /* Регулируем позицию кнопки 1 */
+  bottom: 13%;
+  z-index: 101;
+
+}
+#contactChoice2 {
+  left: 68%; /* Регулируем позицию кнопки 2 */
+  bottom: 13%;
+  z-index: 101;
+}
+#contactChoice3 {
+  left: 70%; /* Регулируем позицию кнопки 3 */
+  bottom: 13%;
+  z-index: 101;
+}
+#contactChoice4 {
+  left: 72%; /* Регулируем позицию кнопки 4 */
+  bottom: 13%;
+  z-index: 101;
+}
+input[type='radio'] {
+  appearance: none; 
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(72, 105, 105); 
+  border-radius: 50%; 
+  background-color: rgb(130, 167, 167);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover {
+  transform: scale(1.5); 
+}
+
+/* Состояние "нажата" */
+input[type="radio"]:checked {
+  background-color: transparent; 
+  border: 2px solid rgb(48, 78, 78);  
+}
+
+/* Показываем первый слайд по умолчанию */
+#contactChoice1:checked ~ .slider #slide1 {
+  display: block;
+  z-index: 10;
+  opacity: 1;
+}
+#contactChoice2:checked ~ .slider #slide2 {
+  display: block;
+  z-index: 10;
+  opacity: 1;
+}
+#contactChoice3:checked ~ .slider #slide3 {
+  display: block;
+  z-index: 10;
+  opacity: 1;
+}
+#contactChoice4:checked ~ .slider #slide4 {
+  display: block;
+  z-index: 10;
+  opacity: 1;
+}
+
+@media (max-width: 1169px) {
+  #contactChoice1 {
+    left: 62%; /* Регулируем позицию кнопки 1 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice2 {
+    left: 66%; /* Регулируем позицию кнопки 2 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice3 {
+    left: 70%; /* Регулируем позицию кнопки 3 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice4 {
+    left: 74%; /* Регулируем позицию кнопки 4 */
+    bottom: 13%;
+    z-index: 101;
+  }
+}
+
+
+
+@media (max-width: 630px) {
+  .text-mem {
+    font-size: 14px;
+    padding: 3px 0;
+    padding-left: 7%;
+  }
+  input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+  #contactChoice1 {
+    left: 62%; /* Регулируем позицию кнопки 1 */
+    bottom: 13%;
+    z-index: 101;
+  
+  }
+  #contactChoice2 {
+    left: 68%; /* Регулируем позицию кнопки 2 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice3 {
+    left: 74%; /* Регулируем позицию кнопки 3 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice4 {
+    left: 78%; /* Регулируем позицию кнопки 4 */
+    bottom: 13%;
+    z-index: 101;
+  }
+}
+@media (max-width: 638px) {
+  #contactChoice1 {
+    left: 40%; /* Регулируем позицию кнопки 1 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice2 {
+    left: 45%; /* Регулируем позицию кнопки 2 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice3 {
+    left: 50%; /* Регулируем позицию кнопки 3 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice4 {
+    left: 55%; /* Регулируем позицию кнопки 4 */
+    bottom: 13%;
+    z-index: 101;
+  }
+}
+
+@media (max-width: 320px) {
+  #contactChoice1 {
+    left: 39%; /* Регулируем позицию кнопки 1 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice2 {
+    left: 45%; /* Регулируем позицию кнопки 2 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice3 {
+    left: 51%; /* Регулируем позицию кнопки 3 */
+    bottom: 13%;
+    z-index: 101;
+  }
+  #contactChoice4 {
+    left: 57%; /* Регулируем позицию кнопки 4 */
+    bottom: 13%;
+    z-index: 101;
+  }
+}
+@media (max-height: 567px) {
+  #contactChoice1 { 
+    bottom: 2%;
+  }
+  #contactChoice2 {
+    bottom: 2%;
+  }
+  #contactChoice3 {
+    bottom: 2%;
+  }
+  #contactChoice4 {
+    bottom: 2%;
+  }
+}

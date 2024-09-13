@@ -9,24 +9,44 @@
 </head>
 <body>
   <header></header>
+
   <main>
-    <div class="contaiter-slider">
+    <div class="container-slider">
+       <!-- Радио-кнопки -->
+       <input type="radio" " id="contactChoice1" name="contact" class="radio-slide" checked />
+       <label for="contactChoice1"></label>
+       <input type="radio" id="contactChoice2" name="contact" class="radio-slide"/>
+       <label for="contactChoice2"></label>
+       <input type="radio" id="contactChoice3" name="contact" class="radio-slide"/>
+       <label for="contactChoice3"></label>
+       <input type="radio" id="contactChoice4" name="contact" class="radio-slide" />
+       <label for="contactChoice4"></label> 
+
       <div class="slider">
-        <div class="img-mem"> 
-          <a href="/" class="screen-slider">
-            <img src="./assets/jdun.jpg" alt="Jdun Mem">
-          </a>
-          <div class="text-mem"> JHJHGFFHGVGHFHFHF </div>
-          <div class="container-radio-box">
-          <input type="radio" id="contactChoice1" name="contact" />
-          <input type="radio" id="contactChoice1" name="contact" />
-          <input type="radio" id="contactChoice1" name="contact" />
-          <input type="radio" id="contactChoice1" name="contact" />
+       
+        <!-- Слайды -->
+        <div class="img-mem slide" id="slide1">
+          <img src="./assets/jdun.jpg" alt="Slide 1">
+          <div class="text-mem"> Когда ждешь отклика на твое резюме. </div>
         </div>
+        <div class="img-mem slide" id="slide2">
+          <img src="./assets/dicaprio.jpg" alt="Slide 2">
+          <div class="text-mem"> Когда получаешь первое письмо с тестовым заданием. </div>
+        </div>
+  
+        <div class="img-mem slide" id="slide3">
+          <img src="./assets/tulen.jpg" alt="Slide 3">
+          <div class="text-mem"> Собеседование прошло успешно! </div>
+        </div>
+  
+        <div class="img-mem slide" id="slide4">
+          <img src="./assets/lastmem.jpg" alt="Slide 4">
+          <div class="text-mem"> HR слушает почему нужно выбрать именно тебя. </div>
         </div>
       </div>
     </div>
   </main>
+   
   <footer></footer>
 </body>
 </html>
